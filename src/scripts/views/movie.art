@@ -1,0 +1,54 @@
+<div class="body-wrap">
+    <!-- 下载 -->
+    <a id="download-header" style="user-select: auto;">
+        <div class="download-header" style="user-select: auto;">
+            <div class="logo-img" style="user-select: auto;"></div>
+            <div class="info-wrapper" style="user-select: auto;">
+                <div class="title" style="user-select: auto;">狗💩</div>
+                <div class="content" style="user-select: auto;">还想看电影，做梦吧你就</div>
+            </div>
+            <div class="link-btn" style="user-select: auto;">赶紧醒醒</div>
+        </div>
+    </a>
+    <!-- 侧边app -->
+    <a id="download-tip" class="download-tip hidden" href=""></a>
+    <!-- 筛选条件 -->
+    <div class="topbar">
+        <div class="white-bg topbar-bg">
+            <div class="city-entry" data-to="city">
+                <span class="city-name">{{city}}</span><i class="city-entry-arrow"></i>
+            </div>
+
+            <div class="switch-hot" data-active=".n-hot">
+                <div class="hot-item active" data-tab=".n-hot">正在热映</div>
+                <div class="hot-item " data-tab=".f-hot">即将上映</div>
+            </div>
+            <div class="yo-ico search-icon" data-type="movie">&#xe60a;</div>
+        </div>
+    </div>
+    <!-- 电影列表 -->
+    <div class="page-wrap">
+        <div class="page n-hot active">
+            <div class="list-wrap">
+
+            </div>
+        </div>
+        <div class="page f-hot ">
+            <div class="list-wrap">
+                
+                    <div class="most-expected">
+                        <p class="title">近期最受期待</p>
+                        <div class="most-expected-list">
+                            <div class="most-expected-body">
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="coming-list">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

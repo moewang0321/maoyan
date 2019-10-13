@@ -1,0 +1,119 @@
+<div class="detail-root">
+    <div class="detailContainer">
+        <header class="navbar icbcback">
+            <div class="nav-wrap-left">
+                <a class="back" href="#" onclick="javascript: window.history.back();return false;"
+                ><i class="icon-back"></i></a>
+            </div>
+            <h1 class="nav-header">{{detailMovie.nm}}</h1>
+        </header>
+        <div class="body-wrap">
+            <!-- 下载 -->
+            <a id="download-header">
+                <div class="download-header">
+                    <div class="logo-img"></div>
+                    <div class="info-wrapper">
+                        <div class="title">狗💩</div>
+                        <div class="content">还想看电影，做梦吧你就</div>
+                    </div>
+                    <div class="link-btn">赶紧醒醒</div>
+                </div>
+            </a>
+            <!-- 侧边app -->
+            <a id="download-tip" class="download-tip hidden" href=""></a>
+            <!-- 电影信息 -->
+            <div class="movie-detail" data-bid="dp_wx_buy_movie">
+                <div class="movie-filter"></div>
+                <div class="poster-bg"
+                    style="background-image:url({{detailMovie.img.replace(/w.h/ , '148.208')}})">
+                </div>
+                <div class="detail box-flex">
+                    <div class="poster">
+                        <img src="{{detailMovie.img.replace(/w.h/ , '148.208')}}">
+                    </div>
+                    <div class="content flex">
+                        <div class="title middle line-ellipsis">{{detailMovie.nm}}</div>
+                        <div class="title-en-name line-ellipsis">{{detailMovie.enm}}</div>
+                        <div class="score line-ellipsis">
+                            {{if(detailMovie.sc <=0)}}
+                            <span class="no-score">暂无评分</span>
+                            
+                            {{/if}}
+                            {{if(detailMovie.sc > 0)}}
+                            {{detailMovie.sc}}
+                            <span class="snum">({{detailMovie.snum}}人评)</span>
+                            {{/if}}
+                        </div>
+                        <div class="type line-ellipsis">
+                            <span>{{detailMovie.cat}}</span>
+    
+                            <div class="type-group">
+                                {{if(detailMovie.version == 'v3d imax')}}
+                                <img style="width: 42px;" class="sd-imax"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAeCAYAAADTsBuJAAAD+0lEQVRoge2aPUwUQRSAPy4YiZh4DbT8VJhIvA4KkyOhBq+Uyi2gFlssPAtoPW01cWm0RaxVTCi0EkOhFXe0WoiJGhJJ1uK9cefW/ZnF3K3R/ZLNDDNvfnhv5s3bvRkIggBgGLgIjACDlPSSE+AT8B74NhAEwXngCnCm0Gn9f/wAdgeBKf5O5T8regI9Ygi4DIwCUxXE7ZT0j2PgneZHKpQ+vwiONR2sFDqNEkoDFExpgIJx9f+TwDJwySprA0+A11bZCjCR0EcbeAp8zDnHKDWgBfj6oH/XgC3Np9EAVoE9TaNUtR+AJrCTMP4R4GkaZUv7iWvfhcsOmAQ2EOW/QZT+BlH0GjBtyU6o3L71gIRcC8B9YN5hzDSqQB0Yt8pqWtZ0aN9S2VpCfUPr68QbaE+fq4QLINr/VcQwO1mTcdkBS8A54B7w3CpfRHbFIqGiDU9i8tPALeAGshsOHMbOywVkVfoJ9Q1gLKMPo/RXiCLHgU6MzJzW2+PNIf/foZZn4rIDZoDvdCsfQtcz7DIQYqR1zS86tsnLF9J3QdyKtqkhL0mbhK7MS5D1dLwWYiTbdTWId02/4WKAReBaTPmspnl8+r7Kz2YJnpIWssIbMXVziFvZTGlvDOQjykxbyeYMuaCyW5q/qXVO5I2C5hGXtIG4n4/A45x9tBGX1gt8TeNWuqdpM6FtFTHcIaHv9hGDerEtpH4T2TV1JMjICgK6OK0BTDS0Tf6ophe+39BBFFJHVrxhHLiO+PVOQtsGsoJtBfqaeiljbiXknchrgDXEJd1CIiFzCOdhMqd8XpqaelbZaqQurZ1vlXUQo0WjLkPVkrfPA2eyDDCMRC+jkfJ9wpWS1wATyKHeKzqI0q4THo4e8gFsJ6HNHGF09BkIrKeu5XFuzfj9O3SfB85khaGTSOTSRsIrm2+I+4kaJ415lX+Ro81paAIvEaUc8btrieJpeo/46GVVZVYjZXXE2E0tayChaYvsiAvINsA+slonkJ1gx/tGmW2XgVR+RfvLe3DnZYcwgjnSvJ8gW0V2yyHJSqsiC9DTfmrAXcTteJach0RAN3QOmbvB5UXsgXa4jvj9AySMNJ8cHsa0WbLyxoWNIspf488/R7jQBB4RuogkPE3TdkiL0AAm5DRtO5bcEbIL3iKGGifjfcDFAM8Rd7OMvJTNaHkbUX70LRi6DdBGFL5t9dUPfMQIVdKVa1Z92mrtIGdIXeXGkGgrrs0eYvDbOoe4d5JfDARBsJAmEMMw/VHiv/qTpGEBTvc5ul8r+L+g/D2gYEoDFExpgIKpIDe1SvrLWU1PKsg1uZL+MUT4a9yn8mpicfwAdgf0cu555IpieTm395jLuR+Arz8BrLjpSMoYSlEAAAAASUVORK5CYII=">
+                                {{/if}}
+                                {{if(detailMovie.version == 'v2d imax')}}
+                                <img style="width: 26px;" class="imax"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAeCAYAAABwmH1PAAACn0lEQVRYhe2ZUW7TQBCGv0RBrUSl+KW8po/lqTkAknOBCN+gewPCDdwbmBuYGwRxAILEAZoneHRf6QNBAgmJSsvDjOu18TqWnBLV5JdW68zMemd2Z2bH2YG1FuAp8Bw4BUb0C3fALfAZ+Dmw1p4AL4Ane1Xr4fEb+DQCzhFjvwJr4Nc+tXoAHAMXwDPgfIi4MfTTWBCb1vp8OqSI2T4amyO3bTTcqxp7wMHgvqONwVNgBRiHliht0WJ8pLKJhx8ofwXMGuZfqmwdlg3jy7DWzrXhaTMriB3aSmmbhnF5y1R25eEbW2DpkUka+E08t82ttfOuLj2mvPNVRMBkyztyL/kIvATOPDJr5bvzzYBXwM0WPe7R1eDvQNzA3+byU6QoeEvh8sYja3S+BFmUAHFlkIXdbJkL6G5wguxgVMObASFijA/5gqSI8k07da3yY5Vd6vNr5bVCV4NT7et20mgfe8YGyELdIAknf98Ev9EpsoAXyGK+w58Ma9HV4EwVCClnyDPgEonLzDM2QnbIVTjV3jTMufQ8t8IuzuFYe+PQFhVe07jUoWXIIoXUJ6/AkXfjuTV2YXCGKHlJkUwMklVXnjEziuz9DbBOC5VeFyZ53F5RjufW2NXHfgx8UCU2/O2qVRjt31CfXRcqs6jQQmRxY6VFyFGV0K4I6lx4VAuMjfZZhecWHoH+rsrUFRNGf0+dQufMkQucwib6F4WHixjZ2QnluKzCaN/kAe6Z7J63hnIS3FAciSn+0vMeuzQ4RY6YPJn4kLteU+xlSA4IVW6CnAZ1Y66RmB7TvNAADKy1c31+v034kWMOh8/D/uNgcN8xRP6ZB/n/tq840v5uiFxDgHyBHNXLP2ocI9/dALf/3VXLwMpl2gly5dLny7QvwI8/pysRaQplMrsAAAAASUVORK5CYII=">
+                                {{/if}}
+                                {{if(detailMovie.version == 'v3d')}}
+                                <img style="width: 16px;" class="sd"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAeCAYAAABAFGxuAAAB0klEQVRYhe3YIVAbQRTG8V9uqGmwxCeKzjS6iDo08XjQ9UFTXWpbXXTxuArQEY3iPNhSAzNXsZthexNye4VOTvDNZG5n8+7dP2+/t7m7XlVV0McbbGHDenSPG/zEba+qqk28x6s1AdV1hx8FtnUHisCyXQjL1zVtFdbnqVXaKNZN8JhewNoq118jHOBtMlfiFBfJ3CGGj+Qo8R3XORfMqdgIHyPUZYS5jABTjJPYYYybJR8YYA+fsZsDllOxfbzGCc6T+YlQxUkCsNDpkvEYR/ggVO9q1UVzKvYOv2tQPCxhPyMHAf44jidNwTkVeyzJTjxmeSZqFuN3mgLbbq67gl/Ggpeu8a1ljlJYhWcHSzvzTLuKEbz17GDTeBx7MD8BMFejnKAm8/cjxKA2P8OnOG40ck1DoZmeBDYSOuloyXe3wjLWoVdp4dGLpsAmsJnw64b+3kjTi5QtoA5jvsaGyfHYF2FTPBZ2/Cuh3Rd/PV+XnLOfjBdWGESoqYyGyQE7F5btQOimRUeVEaq+69fByghyluRqVK+qqr2cwET93ORP0b/c9vx3KDp8P/YC1laF8ATcNd0XwmN513RTYC48lndFd5j34kuVTeFVQRdeqszx6w/wbmPhysybsgAAAABJRU5ErkJggg==">
+                                {{/if}}
+                                {{if(detailMovie.version == '')}}
+                                {{/if}}
+    
+                            </div>
+    
+                        </div>
+                        <div class="src line-ellipsis">{{detailMovie.src}}/{{detailMovie.dur}}分钟</div>
+                        <div class="pubDesc line-ellipsis">{{detailMovie.pubDesc}}</div>
+                    </div>
+                </div>
+    
+                <div class="arrow-g">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAWCAYAAAAfD8YZAAAAAXNSR0IArs4c6QAAAS5JREFUOBGVkktuwkAMhpOoJ+hhSouE2HbDgiVCNCAOVtQHnINHhbgMJ6g6/f9gR848kmDJeOzxZ3scskzEOfcKXUMLjXXZByYQhJlqMvz3PM//1E9Z7fJoEp5wXvWZoILRZQtg7xVYdhXQzuR2XoEB/NYCOSkVdKI/g441BnuBbmI7aMAE7ilgxyaboYOD4RMO9EWiTwhgJksBLtEvUNolRmGvwJG+yDNsXSB4s2aplR3M4Y80BnuGfiQ7m0Q2qP6JJvaLc/VpTKx5lPe9IfpibviMb+4lOXYXyGLRsRPgSTsSpASdW8Av+YQ3Er+NzgIuELdvZMcAZIUaBsgpCA55IZIEeV+NLSC32hskXCTAH9xFRyWkUsgSrhqAJfjpL8fch0dMMIGWMkmYEIn8Az5Wgp5LHlhmAAAAAElFTkSuQmCC">
+                </div>
+    
+            </div>
+    
+            <!-- 放映日期 -->
+            <div id="showDays">
+                <ul id="timeline" class="mb-line-b">
+                    {{each dayArr}}
+                    <li data-day="{{$value[0]}}" data-offset="{{$index * 10}}" class="showDay">
+                        {{$value[1]}}
+                    </li>
+                    {{/each}}
+                    
+                </ul>
+            </div>
+    
+            <!-- 筛选 -->
+            <div class="nav-wrap filter-nav-wrap">
+                <div class="tab mb-line-b">
+                    <div class="item" data-tab=".region">全城<span class="drop"></span></div>
+                    <div class="item" data-tab=".brand">品牌<span class="drop"></span></div>
+                    <div class="item" data-tab=".special">特色<span class="drop"></span></div>
+                </div>
+    
+            </div>
+    
+            <div class="cinema-list">
+                <div class="list-wrap">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 遮罩层 -->
+    <div class="mask hidden">
+        <span>
+            <p>❌❌❌</p>
+            <p>静态页面写的，mock不了</p>
+        </span>
+    </div>
+</div>

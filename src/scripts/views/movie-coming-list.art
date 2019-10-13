@@ -1,0 +1,80 @@
+{{each list}}
+    <div>
+    <p class="group-date">{{$value.comingTitle}}</p>
+    {{each $value.data}}
+    <div class="item" data-id="{{$value.id}}">
+        <div class="main-block">
+            <div class="avatar" sort-flag="">
+
+                <div class="default-img-bg">
+                    <img src="{{$value.img.replace(/w.h/ , '128.180')}}"
+                        onerror="this.style.visibility='hidden'">
+                </div>
+            </div>
+            <div class="mb-outline-b content-wrapper">
+
+
+                <div class="column content">
+                    <div class="box-flex movie-title">
+                        <div class="title line-ellipsis ">{{$value.nm}}</div>
+                        {{if($value.version)}}
+                        <span class="version {{$value.version}}"></span>
+                        {{/if}}
+    
+                        {{if($value.preShow == true)}}
+                        <span class="pre-show"></span>
+                        {{/if}}
+
+                    </div>
+
+                    <div class="detail column">
+
+
+                        <div class="wantsee line-ellipsis">
+                            <span class="person">{{$value.wish}}</span>
+                            <span class="p-suffix">人想看</span>
+                        </div>
+
+
+
+
+                        <div class="actor line-ellipsis">主演: {{$value.star}}</div>
+
+
+
+                        <div class="actor line-ellipsis">{{$value.rt}}上映</div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="button-block" data-id="{{$value.id}}">
+                    {{if($value.showst == 1)}}
+                    <div class="btn toggle-wish-btn" data-wishst="0" data-movieid="{{$value.id}}">
+                        <span class="fix" data-bid="dp_wx_home_movie_btn">想看</span>
+                    </div>
+                    {{/if}}
+                    {{if($value.showst == 4)}}
+                    <div class="btn pre" data-wishst="0" data-movieid="{{$value.id}}">
+                        <span class="fix" data-bid="dp_wx_home_movie_btn">预售</span>
+                    </div>
+                    {{/if}}
+
+                </div>
+
+            </div>
+        </div>
+        <!-- {{$value.nm}} -->
+    </div>
+    {{/each}}
+    </div>
+{{/each}}
+<div class="more">
+    <div class="loader-wrap">
+        <span class="loader-img"></span>
+        <span>正在加载...</span>
+    </div>
+</div>
+
+

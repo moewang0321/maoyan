@@ -1,0 +1,28 @@
+<div class="indexContainer">
+    <header class="navbar">
+        <h1 class="nav-header">
+            狗💩电影
+        </h1>
+    </header>
+    <main>
+        
+    </main>
+    <footer>
+        <ul>
+            <li class="active" data-to="movie">
+                <span class="yo-ico">
+                    &#xe6ee;
+                </span>
+                <span class="footer-text">电影</span>
+            </li>
+            <li data-to="cinema">
+                <span class="yo-ico">&#xe61d;</span>
+                <span class="footer-text">影院</span>
+            </li>
+            <li data-to="profile">
+                <span class="yo-ico">&#xe604;</span>
+                <span class="footer-text">我的</span>
+            </li>
+        </ul>
+    </footer>
+</div>

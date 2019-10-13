@@ -1,0 +1,130 @@
+.body{
+    height: 100%;
+}
+.my-center {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        background-color: #f03d37;
+        background-image: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/bg.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 100% 150px;
+        height: 150px;
+        overflow: hidden;
+        text-align: center;
+        img {
+            display: inline-block;
+            margin-top: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            border: 3px solid #fff;
+        }
+        .name {
+            margin-top: 7px;
+            font-size: 16px;
+            line-height: 22.5px;
+            color: #fff;
+        }
+    }
+    .container {
+        flex: 1;
+        .group {
+            margin-top: 10px;
+            background: #fff;
+            .item {
+                position: relative;
+                height: 44px;
+                line-height: 44px;
+                font-size: 15px;
+                margin-left: 15px;
+                padding-right: 15px;
+                a {
+                    display: block;
+                    color: #333;
+                }
+            }
+            .orders {
+                padding: 0 15px;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+            }
+            .title {
+                position: relative;
+                margin: 13px 0 0;
+                font-size: 15px;
+                line-height: 21px;
+                height: 21px;
+                color: #333;
+                z-index: 9;
+                display: inline-block;
+                width: 80px;
+                background-color: #fff;
+            }
+            .title-line {
+                position: absolute;
+                top: 23px;
+                left: 50%;
+                margin-left: -80px;
+                width: 160px;
+                height: 1px;
+            }
+            .list {
+                overflow: hidden;
+                .order-item {
+                    width: 25%;
+                    float: left;
+                    height: 97px;
+                    background-repeat: no-repeat;
+                    background-position: top;
+                    background-size: 42px auto;
+                    margin-top: 18px;
+                    a {
+                        display: block;
+                        height: 90px;
+                        p {
+                            position: relative;
+                            top: 53px;
+                            text-align: center;
+                            font-size: 15px;
+                            line-height: 21px;
+                            height: 21px;
+                            margin: 0;
+                            color: #333;
+                        }
+                    }
+                }
+                .order-item.movie {
+                    background-image: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/movie.png);
+                }
+                .order-item.store {
+                    background-image: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/store.png);
+                }
+                
+                
+            }
+            .list.list-two{
+                .order-item {
+                    width: 50%;
+                }
+            } 
+        }
+    }
+    .footer {
+        text-align: center;
+        margin: 20px 0 71px;
+        div {
+            display: inline-block;
+            font-size: 13px;
+            color: #999;
+            padding-bottom: constant(safe-area-inset-bottom);
+            .telephone {
+                display: inline-block;
+                color: #fa0;
+            }
+        }
+    }
+}

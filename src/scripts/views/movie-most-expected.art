@@ -1,0 +1,20 @@
+
+        {{each list}}
+        <div class="expected-item item" data-id={{$value.id}}>
+            <div class="poster default-img-bg">
+                <img src="{{$value.img.replace(/w.h/ , '170.230')}}"
+                    onerror="this.style.visibility='hidden'">
+                <span class="wish-bg"></span>
+                <span class="wish"><span class="wish-num">{{$value.wish}}</span>人想看</span>
+                <div class="toggle-wish" data-wishst="0" data-movieid="{{$value.id}}">
+                    <span></span>
+                </div>
+            </div>
+            <h5 class="name line-ellipsis">{{$value.nm}}</h5>
+            <p class="date">{{$value.comingTitle.replace(/([\s][^\s]+)$/ , '')}}</p>
+        </div>
+
+        {{/each}}
+
+
+        

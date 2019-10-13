@@ -1,0 +1,48 @@
+<div class="body">
+    <div class="my-center">
+        <div class="header ">
+            <img src="https://img.meituan.net/maoyanuser/da1d6e35eda3d36bd7c61a60ea7f942a10407.png" class="head-icon">
+            <div class="name">用户sd8kv0sczp</div>
+        </div>
+        <div class="container">
+            <div class="group">
+                <div class="mb-outline-tb">
+                    <div class="orders">
+                        <div class="title">我的订单</div>
+                        <div class="mb-outline-b title-line"></div>
+                        <div class="list list-two">
+                            <!-- TODO 演出开发完毕后，改成下面注释内容 -->
+                            <!-- <div class="list list list-three"> -->
+                            <div class="order-item movie">
+                                <a data-type="mip" href="/myOrder?$from=canary">
+                                    <p>电影</p>
+                                </a>
+                            </div>
+                        
+                            <div class="order-item store"><a data-link="/store/order/list?$from=canary">
+                                    <p>商城</p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="mb-outline-tb">
+                    <div class="coupon item mb-line-b"><a data-link="/vod/order?$from=canary"><span>在线观影</span></a>
+                    </div>
+                    <div class="coupon item mb-line-b"><a data-link="/myCoupon?$from=canary"><span>优惠券</span></a></div>
+                    <div class="membercard item mb-line-b"><a
+                            data-link="/multiplecard/mylist?$from=canary"><span>折扣卡</span></a></div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer">
+            <div>©狗💩电影&nbsp;客服电话：<a href="" class="telephone">1234-5678</a></div>
+        </div>
+    </div>
+
+    
+</div>

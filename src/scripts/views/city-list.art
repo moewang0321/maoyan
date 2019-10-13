@@ -1,0 +1,169 @@
+<div id="city-list" class="city-list-container">
+    <div id="showLetter" class="showLetter"><span>A</span></div>
+    
+    <!-- 定位 -->
+    <section>
+        <div id="locate" class="city-title">
+            定位城市
+        </div>
+        <div class="city-list city-list-inline clearfix">
+            <div class="location-city">定位失败，请点击重试</div>
+        </div>
+    </section>
+    <!-- 历史记录 -->
+    <section class="history-city-list">
+        {{if(history)}}
+        <div id="history" class="city-title">
+            最近访问城市
+        </div>
+            {{each history}}
+            <div class="city-list city-list-inline clearfix">
+                    {{each $value}}
+                <div class="city-item" data-nm="{{$value.nm}}" data-id="{{$value.id}}">
+                    {{$value.nm}}
+                </div>
+                {{/each}}
+            </div> 
+            {{/each}}
+        {{/if}}
+    </section>
+    <!-- 热门 -->
+    <section>
+        <div id="hot" class="city-title">
+            热门城市
+        </div>
+        <div class="city-list city-list-inline clearfix">
+            <div class="city-item" data-nm="上海" data-id="10">
+                上海
+            </div>
+            <div class="city-item" data-nm="北京" data-id="1">
+                北京
+            </div>
+            <div class="city-item" data-nm="广州" data-id="20">
+                广州
+            </div>
+            <div class="city-item" data-nm="深圳" data-id="30">
+                深圳
+            </div>
+            <div class="city-item" data-nm="武汉" data-id="57">
+                武汉
+            </div>
+            <div class="city-item" data-nm="天津" data-id="40">
+                天津
+            </div>
+            <div class="city-item" data-nm="西安" data-id="42">
+                西安
+            </div>
+            <div class="city-item" data-nm="南京" data-id="55">
+                南京
+            </div>
+            <div class="city-item" data-nm="杭州" data-id="50">
+                杭州
+            </div>
+            <div class="city-item" data-nm="成都" data-id="59">
+                成都
+            </div>
+            <div class="city-item" data-nm="重庆" data-id="45">
+                重庆
+            </div>
+        </div>
+    </section>
+    <!-- 城市 -->
+    <section>
+        {{each result}}
+        <div id="{{$value['title']}}" class="city-title city-title-letter">
+            {{$value['title']}}
+        </div>
+            {{each $value['items']}}
+            <div class="city-list city-list-block clearfix">
+                <div class="city-item" data-nm="{{$value.nm}}" data-id="{{$value.id}}">
+                    {{$value.nm}}
+                </div>
+            </div>
+            {{/each}}
+        {{/each}}
+        
+    </section>
+    
+
+    <!-- 索引 -->
+    <section class="nav">
+        <div class="  nav-item" data-id="locate">
+            定位
+        </div>
+        {{if(history)}}
+        <div class="  nav-item" data-id="history">
+            最近
+        </div>
+        {{/if}}
+        <div class="  nav-item" data-id="hot">
+            热门
+        </div>
+        <div class="nav-letter  nav-item" data-id="A">
+            A
+        </div>
+        <div class="nav-letter  nav-item" data-id="B">
+            B
+        </div>
+        <div class="nav-letter  nav-item" data-id="C">
+            C
+        </div>
+        <div class="nav-letter  nav-item" data-id="D">
+            D
+        </div>
+        <div class="nav-letter  nav-item" data-id="E">
+            E
+        </div>
+        <div class="nav-letter  nav-item" data-id="F">
+            F
+        </div>
+        <div class="nav-letter  nav-item" data-id="G">
+            G
+        </div>
+        <div class="nav-letter  nav-item" data-id="H">
+            H
+        </div>
+        <div class="nav-letter  nav-item" data-id="J">
+            J
+        </div>
+        <div class="nav-letter  nav-item" data-id="K">
+            K
+        </div>
+        <div class="nav-letter  nav-item" data-id="L">
+            L
+        </div>
+        <div class="nav-letter  nav-item" data-id="M">
+            M
+        </div>
+        <div class="nav-letter  nav-item" data-id="N">
+            N
+        </div>
+        <div class="nav-letter  nav-item" data-id="P">
+            P
+        </div>
+        <div class="nav-letter  nav-item" data-id="Q">
+            Q
+        </div>
+        <div class="nav-letter  nav-item" data-id="R">
+            R
+        </div>
+        <div class="nav-letter  nav-item" data-id="S">
+            S
+        </div>
+        <div class="nav-letter  nav-item" data-id="T">
+            T
+        </div>
+        <div class="nav-letter  nav-item" data-id="W">
+            W
+        </div>
+        <div class="nav-letter  nav-item" data-id="X">
+            X
+        </div>
+        <div class="nav-letter  nav-item" data-id="Y">
+            Y
+        </div>
+        <div class="nav-letter  nav-item" data-id="Z">
+            Z
+        </div>
+    </section>
+</div>
